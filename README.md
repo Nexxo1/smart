@@ -2,11 +2,12 @@
 Simple SMART utility that uses smartmontools
 
 Example docker compose
-
+```
 version: "3"
 services:
   smart:
     image: ubersmart:latest
+    hostname: ...
     container_name: ubersmart
     cap_add:
       - SYS_RAWIO
@@ -29,3 +30,4 @@ services:
       - /dev/sdf 
     # privileged: true     
     restart: unless-stopped
+```
